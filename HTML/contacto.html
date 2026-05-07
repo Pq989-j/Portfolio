@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form action="/procesar" method="post">
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            minlength="10"
+          />
+        </p>
+
+        <p>
+          <label for="apellido">Apellido:</label>
+          <input
+            type="text"
+            id="apellido"
+            name="apellido"
+            required
+            minlength="10"
+          />
+        </p>
+
+        <p>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="ejemplo@gmail.com"
+          />
+        </p>
+
+        <p>
+          <label for="date">Fecha de nacimiento:</label>
+          <input type="date" name="date" id="date" />
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tu Consulta</legend>
+
+        <p>
+          <label for="motivo">Motivo:</label>
+          <select id="motivo" name="motivo">
+            <option value="">-- Selecciona --</option>
+            <option value="es" selected>Reclamos</option>
+            <option value="dev">Devoluciones</option>
+            <option value="fel">Felicitaciones</option>
+            <option value="o">Otro</option>
+          </select>
+
+          <select name="motivo">
+            <optgroup label="Reclamos">
+              <option value="fail">Falla en el servicio</option>
+              <option value="o">Otro</option>
+            </optgroup>
+
+            <optgroup label="Devoluciones">
+              <option value="pr">Producto defectuoso</option>
+              <option value="o">Otro</option>
+            </optgroup>
+
+            <optgroup label="Felicitaciones">
+              <option value="bu">Excelente servicio</option>
+              <option value="o">Otro</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="prioridad">Prioridades:</label>
+          <input type="radio" name="prioridad" value="B" /> Baja
+          <input type="radio" name="prioridad" value="M" /> Media
+          <input type="radio" name="prioridad" value="A" /> Alta
+        </p>
+
+        <p>
+          <label for="com">Canales de Comunicacion:</label>
+          <label
+            ><input type="checkbox" id="cdbox1" value="first_checkbox" />
+            WhatsAPP</label
+          >
+          <label
+            ><input type="checkbox" id="cdbox2" value="second_checkbox" />
+            Telefono</label
+          >
+          <label
+            ><input type="checkbox" id="cdbox3" value="third_checkbox" />
+            Email</label
+          >
+        </p>
+
+        <p>
+          <label for="mes">Mensaje:</label>
+          <textarea name="message" id="message" required minlength="10">Introduzca aqui su texto</textarea>
+        </p>
+
+        <p>
+          <label for="file">Adjuntar archivo:</label>
+          <input
+            type="file"
+            id="avatar"
+            name="avatar"
+            accept="image/png, image/jpeg"
+          />
+        </p>
+
+        <p>
+          <label for="privacy">"He leido la politica de privacidad"</label>
+          <input type="checkbox" name="privacy" id="privacy" required />
+        </p>
+
+        <p>
+          <label for="submit">
+            <button type="submit" id="submit" name="submit">Enviar</button>
+          </label> 
+          <label for="reset">
+            <button type="reset" id="reset" name="reset">Limpiar</button>
+          </label>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
